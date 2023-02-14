@@ -6,7 +6,9 @@ import torch.nn.functional as F
 
 # head used for bert4rec
 class DotProductPredictionHead(nn.Module):
-    """share embedding parameters"""
+    """share embedding parameters
+        from https://arxiv.org/abs/1904.06690    
+    """
     def __init__(self, d_model, num_items, token_embeddings):
         super().__init__()
         self.token_embeddings = token_embeddings
