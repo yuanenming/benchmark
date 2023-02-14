@@ -25,6 +25,8 @@ class BERTEmbedding(nn.Module):
         1. TokenEmbedding : normal embedding matrix
         2. PositionalEmbedding : adding positional information using sin, cos
         sum of all these features are output of BERTEmbedding
+        
+        from https://arxiv.org/abs/1810.04805
     """
     def __init__(self, vocab_size, embed_size, max_len, dropout=0.1):
         """
